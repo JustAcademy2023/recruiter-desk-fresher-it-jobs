@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What Recruiters Expect From Freshers Entering IT Industry | The Recruiter's Desk</title>
+<meta name="description" content="An interactive desk that shows what recruiters look for in IT freshers: skills, projects, attitude and where to start in Hyderabad.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--green:#12301f;--green2:#1c4630;--brown:#6b4226;--brown2:#4a2c17;--blue:#3d7fc4;--peach:#ffcfb0;--peach2:#ffe6d5;--ink:#1b1b1b}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--green);color:var(--peach2);line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;line-height:1.1}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:20;background:rgba(18,48,31,.92);backdrop-filter:blur(8px);border-bottom:3px solid var(--brown)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 20px;max-width:1120px;margin:0 auto;flex-wrap:wrap}
+.logo{font-family:'Fraunces',serif;font-weight:800;font-size:1.25rem;color:var(--peach)}
+.logo span{color:var(--blue)}
+nav{display:flex;gap:6px;flex-wrap:wrap}
+nav a{padding:6px 14px;border-radius:99px;font-weight:500;font-size:.92rem}
+nav a:hover{background:var(--brown);color:var(--peach)}
+.hero{padding:64px 0 48px;background:radial-gradient(circle at 85% 10%,rgba(61,127,196,.28),transparent 45%),var(--green)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center}
+.tag{display:inline-block;background:var(--blue);color:#fff;padding:5px 14px;border-radius:99px;font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+h1{font-size:clamp(2.2rem,5.2vw,3.9rem);color:var(--peach);margin:16px 0}
+h1 em{font-style:normal;color:#fff;background:linear-gradient(transparent 62%,var(--blue) 62%)}
+.lead{font-size:1.08rem;max-width:520px;color:var(--peach2)}
+.btn{display:inline-block;margin-top:22px;background:var(--peach);color:var(--brown2);font-weight:700;border:0;padding:14px 26px;border-radius:14px;font-size:1rem;cursor:pointer;box-shadow:0 6px 0 var(--brown);transition:transform .15s,box-shadow .15s;font-family:inherit}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(5px);box-shadow:0 1px 0 var(--brown)}
+.desk{background:linear-gradient(180deg,var(--brown) 0,var(--brown2) 100%);border-radius:24px;padding:26px;box-shadow:0 24px 50px rgba(0,0,0,.4);position:relative}
+.paper{background:var(--peach);color:var(--ink);border-radius:8px;padding:22px;transform:rotate(-1.4deg);box-shadow:0 10px 24px rgba(0,0,0,.35)}
+.paper h3{font-size:1.35rem;color:var(--green)}
+.paper small{color:#6b4226}
+.line{padding:7px 10px;margin-top:8px;border-radius:8px;background:rgba(255,255,255,.45);transition:all .35s;font-size:.92rem;border:2px solid transparent}
+.line.on{background:#fff;border-color:var(--blue);box-shadow:0 0 0 4px rgba(61,127,196,.25);transform:translateX(6px)}
+.line.miss{opacity:.45;text-decoration:line-through}
+.timer{display:flex;align-items:center;justify-content:space-between;margin-top:16px;gap:10px;flex-wrap:wrap}
+.clock{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:800;color:var(--peach)}
+.note{background:var(--blue);color:#fff;padding:10px 14px;border-radius:6px;font-size:.9rem;min-height:46px;flex:1;min-width:180px;transform:rotate(1deg)}
+section{padding:70px 0}
+.sec-h{text-align:center;max-width:680px;margin:0 auto 38px}
+.sec-h h2{font-size:clamp(1.8rem,4vw,2.7rem);color:var(--peach)}
+.sec-h p{margin-top:10px;opacity:.9}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.flip{perspective:900px;height:230px;cursor:pointer}
+.flip>div{position:relative;width:100%;height:100%;transition:transform .6s;transform-style:preserve-3d}
+.flip.open>div{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;border-radius:20px;padding:22px;display:flex;flex-direction:column;justify-content:center}
+.front{background:var(--green2);border:2px solid var(--brown)}
+.front b{font-size:2.2rem}
+.front h3{margin:6px 0;color:var(--peach)}
+.front span{font-size:.82rem;color:var(--blue);font-weight:700}
+.back{background:var(--peach);color:var(--brown2);transform:rotateY(180deg);font-size:.95rem}
+.back h3{color:var(--green);margin-bottom:6px}
+.tool{background:var(--brown2);border-radius:28px;padding:34px;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center;border:2px solid var(--brown)}
+.check label{display:flex;gap:12px;align-items:center;padding:10px 14px;margin-bottom:8px;background:rgba(255,206,176,.1);border-radius:12px;cursor:pointer;font-weight:500}
+.check input{width:20px;height:20px;accent-color:var(--blue)}
+.meter{background:var(--green);border-radius:99px;height:22px;overflow:hidden;margin:14px 0;border:2px solid var(--brown)}
+.meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--peach));transition:width .5s}
+.score{font-family:'Fraunces',serif;font-size:3.4rem;color:var(--peach);font-weight:800}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.card{display:flex;flex-direction:column;background:var(--green2);border:2px solid var(--brown);border-radius:22px;padding:24px;transition:transform .2s,border-color .2s,background .2s}
+.card:hover{transform:translateY(-8px) rotate(-.6deg);border-color:var(--peach);background:var(--brown2)}
+.card .k{font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
+.card h3{font-size:1.3rem;margin:8px 0;color:var(--peach)}
+.card p{font-size:.92rem;flex:1;opacity:.9}
+.card .go{margin-top:14px;font-weight:700;color:var(--peach)}
+.mains{border:2px solid var(--blue);background:linear-gradient(135deg,var(--green2),var(--brown2))}
+.sub{margin:44px 0 18px;font-size:1.5rem;color:var(--peach)}
+footer{background:var(--brown2);border-top:4px solid var(--brown);padding:44px 0 26px;margin-top:30px}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+footer h4{font-family:'Fraunces',serif;color:var(--peach);margin-bottom:10px}
+footer a{display:block;padding:3px 0;opacity:.9}
+footer a:hover{color:var(--peach);opacity:1;text-decoration:underline}
+.copy{text-align:center;margin-top:28px;font-size:.85rem;opacity:.7}
+@media(max-width:860px){.hero .wrap,.tool,.fgrid{grid-template-columns:1fr}.hero{padding-top:36px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header><div class="nav"><a class="logo" href="#top">The Recruiter's <span>Desk</span></a>
+<nav><a href="#scan">The Scan</a><a href="#expect">Expectations</a><a href="#check">Readiness</a><a href="#learn">Learn</a><a href="#read">Read</a></nav></div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+<div><span class="tag">Hyderabad Fresher Guide</span>
+<h1>Your resume gets thirty seconds. Make <em>every one</em> count.</h1>
+<p class="lead">Pull up a chair at the recruiter's desk. See what gets noticed, what gets skipped and what turns a fresher application into a phone call.</p>
+<button class="btn" id="start">Start the 30 second scan</button></div>
+<div class="desk" id="scan"><div class="paper">
+<h3>Ananya R. | Fresher Resume</h3><small>Applying for: Junior Developer</small>
+<div class="line" data-n="0" data-t="Clear target role. Recruiter nods.">Target role: Junior Backend Developer</div>
+<div class="line" data-n="1" data-t="Matches the job post. Good sign.">Skills: Python, SQL, Git, REST APIs</div>
+<div class="line" data-n="2" data-t="A real project with details. This gets remembered.">Project: Expense tracker with login and monthly report</div>
+<div class="line miss" data-n="3" data-t="Skipped. Says nothing specific.">Objective: Seeking a challenging role in a dynamic company</div>
+<div class="line" data-n="4" data-t="Proof of finishing something. Strong.">Internship: Built a dashboard used by the sales team</div>
+<div class="timer"><div class="clock" id="clock">30</div><div class="note" id="note">Press start and watch what the recruiter notices.</div></div>
+</div></div></div></div>
+
+<section id="expect"><div class="wrap">
+<div class="sec-h"><h2>Four things on every recruiter's mind</h2><p>Tap a card to flip it and see what they really want.</p></div>
+<div class="grid">
+<div class="flip"><div><div class="face front"><b>01</b><h3>Direction</h3><span>TAP TO FLIP</span></div><div class="face back"><h3>Pick a lane</h3>A clear target role beats a list of nine tools you skimmed over a weekend.</div></div></div>
+<div class="flip"><div><div class="face front"><b>02</b><h3>Basics</h3><span>TAP TO FLIP</span></div><div class="face back"><h3>Logic, data, Git</h3>Problem solving, one language known well, and databases show up in almost every interview.</div></div></div>
+<div class="flip"><div><div class="face front"><b>03</b><h3>Proof</h3><span>TAP TO FLIP</span></div><div class="face back"><h3>Show real work</h3>One finished project, explained honestly, outweighs twenty tutorial clones.</div></div></div>
+<div class="flip"><div><div class="face front"><b>04</b><h3>Attitude</h3><span>TAP TO FLIP</span></div><div class="face back"><h3>Teachable and kind</h3>Ownership, clear communication and calm reactions to feedback quietly tip the final decision.</div></div></div>
+</div></div></section>
+
+<section id="check"><div class="wrap"><div class="tool">
+<div class="check"><h2 style="margin-bottom:16px;color:var(--peach)">Are you desk ready?</h2>
+<label><input type="checkbox"> I have chosen one target role</label>
+<label><input type="checkbox"> I know one language or tool well</label>
+<label><input type="checkbox"> I finished one project I can explain</label>
+<label><input type="checkbox"> My resume fits one clean page</label>
+<label><input type="checkbox"> I can explain my project in three sentences</label>
+<label><input type="checkbox"> I track every application in a sheet</label></div>
+<div style="text-align:center"><div class="score" id="score">0%</div><div class="meter"><i id="bar"></i></div><p id="msg">Tick what is true for you. Be honest, the desk can tell.</p></div>
+</div></div></section>
+
+<section id="learn"><div class="wrap">
+<div class="sec-h"><h2>Build the skills recruiters ask for</h2><p>Five Hyderabad learning paths to practise with live online guidance.</p></div>
+<div class="cards">
+<a class="card mains" href="https://www.justacademy.co/job-bootcamp-detail/hyderabad/data-analytics-bootcamp-in-hyderabad-online-live-training-with-real-world-projects"><span class="k">Bootcamp</span><h3>Data Analytics Bootcamp</h3><p>Real world projects and live online training for aspiring analysts.</p><span class="go">Explore the bootcamp &rarr;</span></a>
+<a class="card" href="https://www.justacademy.co/course-detail/hyderabad/javascript-training-in-hyderabad"><span class="k">Course</span><h3>JavaScript Training</h3><p>The language of the browser and a favourite in web fresher roles.</p><span class="go">View course &rarr;</span></a>
+<a class="card" href="https://www.justacademy.co/course-detail/hyderabad/python-training-in-hyderabad"><span class="k">Course</span><h3>Python Training</h3><p>A gentle start that opens doors in automation, data and backend work.</p><span class="go">View course &rarr;</span></a>
+<a class="card" href="https://www.justacademy.co/course-detail/hyderabad/flutter-training-in-hyderabad"><span class="k">Course</span><h3>Flutter Training</h3><p>Build mobile apps for two platforms from a single codebase.</p><span class="go">View course &rarr;</span></a>
+<a class="card" href="https://www.justacademy.co/course-detail/hyderabad/figma-training-in-hyderabad"><span class="k">Course</span><h3>Figma Training</h3><p>Learn interface design and build a portfolio recruiters can open.</p><span class="go">View course &rarr;</span></a>
+</div></div></section>
+
+<section id="read"><div class="wrap">
+<div class="sec-h"><h2>Keep reading</h2><p>Four guides to take the next step with confidence.</p></div>
+<div class="cards">
+<a class="card mains" href="https://www.justacademy.co/blog-detail/what-recruiters-expect-from-freshers-entering-it-industry"><span class="k">Main guide</span><h3>What Recruiters Expect From Freshers</h3><p>The full story behind this desk, from resume scans to interview day.</p><span class="go">Read the guide &rarr;</span></a>
+<a class="card" href="https://www.justacademy.co/blog-detail/data-analyst-roadmap-2026-skills-tools-projects-and-career-guide"><span class="k">Blog</span><h3>Data Analyst Roadmap 2026</h3><p>Skills, tools and projects for a data career.</p><span class="go">Read now &rarr;</span></a>
+<a class="card" href="https://www.justacademy.co/blog-detail/full-stack-java-interview-questions-for-freshers-and-experienced-developers"><span class="k">Blog</span><h3>Full Stack Java Interview Questions</h3><p>Practise the questions that show up in real rounds.</p><span class="go">Read now &rarr;</span></a>
+<a class="card" href="https://www.justacademy.co/blog-detail/how-flutter-helps-businesses-build-apps-faster-in-2026"><span class="k">Blog</span><h3>How Flutter Helps Businesses Build Apps Faster</h3><p>Why companies love cross platform development.</p><span class="go">Read now &rarr;</span></a>
+</div></div></section>
+</main>
+
+<footer><div class="wrap"><div class="fgrid">
+<div><h4>The Recruiter's Desk</h4><p>A friendly guide for Hyderabad freshers entering the IT industry. Learn with live interactive, instructor led and mentor led sessions.</p></div>
+<div><h4>Courses</h4>
+<a href="https://www.justacademy.co/job-bootcamp-detail/hyderabad/data-analytics-bootcamp-in-hyderabad-online-live-training-with-real-world-projects">Data Analytics Bootcamp</a>
+<a href="https://www.justacademy.co/course-detail/hyderabad/javascript-training-in-hyderabad">JavaScript</a>
+<a href="https://www.justacademy.co/course-detail/hyderabad/python-training-in-hyderabad">Python</a>
+<a href="https://www.justacademy.co/course-detail/hyderabad/flutter-training-in-hyderabad">Flutter</a>
+<a href="https://www.justacademy.co/course-detail/hyderabad/figma-training-in-hyderabad">Figma</a></div>
+<div><h4>Blogs</h4>
+<a href="https://www.justacademy.co/blog-detail/what-recruiters-expect-from-freshers-entering-it-industry">What Recruiters Expect</a>
+<a href="https://www.justacademy.co/blog-detail/data-analyst-roadmap-2026-skills-tools-projects-and-career-guide">Data Analyst Roadmap</a>
+<a href="https://www.justacademy.co/blog-detail/full-stack-java-interview-questions-for-freshers-and-experienced-developers">Java Interview Questions</a>
+<a href="https://www.justacademy.co/blog-detail/how-flutter-helps-businesses-build-apps-faster-in-2026">Flutter for Business</a></div>
+</div><div class="copy">Made with care for first time job seekers in Hyderabad.</div></div></footer>
+
+<script>
+(function(){
+var lines=[].slice.call(document.querySelectorAll('.line')),clock=document.getElementById('clock'),note=document.getElementById('note'),btn=document.getElementById('start'),t=null;
+function run(){
+ clearInterval(t);var s=30,i=0;lines.forEach(function(l){l.classList.remove('on')});
+ clock.textContent=s;note.textContent='Scanning...';
+ t=setInterval(function(){
+  s--;clock.textContent=s;
+  if(s%6===0&&i<lines.length){lines.forEach(function(l){l.classList.remove('on')});lines[i].classList.add('on');note.textContent=lines[i].getAttribute('data-t');i++}
+  if(s<=0){clearInterval(t);lines.forEach(function(l){l.classList.remove('on')});note.textContent='Time is up. Specific details won, vague lines lost.'}
+ },1000);
+}
+btn.addEventListener('click',function(){run();document.getElementById('scan').scrollIntoView({behavior:'smooth',block:'center'})});
+document.querySelectorAll('.flip').forEach(function(f){f.addEventListener('click',function(){f.classList.toggle('open')})});
+var boxes=[].slice.call(document.querySelectorAll('.check input')),sc=document.getElementById('score'),bar=document.getElementById('bar'),msg=document.getElementById('msg');
+function upd(){var n=boxes.filter(function(b){return b.checked}).length,p=Math.round(n/boxes.length*100);sc.textContent=p+'%';bar.style.width=p+'%';
+ msg.textContent=p===0?'Tick what is true for you. Be honest, the desk can tell.':p<50?'A start. Pick one project and build it this week.':p<100?'Looking good. Polish the gaps and begin applying.':'Desk ready. Send those applications.'}
+boxes.forEach(function(b){b.addEventListener('change',upd)});
+})();
+</script>
+</body>
+</html>
